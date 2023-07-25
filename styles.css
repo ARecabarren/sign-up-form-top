@@ -17,6 +17,7 @@ body > div {
 }
 
 #site-container{
+    display: flex;
     box-shadow: 3px 3px 20px 3px rgba(0, 0, 0, 0.5);
 }
 
@@ -27,6 +28,7 @@ body > div {
     background-size: cover;
     width: 28vw;
     height: 100vh;
+    /* border: 2px solid red; */
 }
 
 #logo-container{
@@ -40,15 +42,44 @@ body > div {
     height: 12.5%;
     position: absolute;
     top: 23%;
+    align-items: center;
+    justify-content: center;
 }
 
 #logo-container > img{
     margin-left: 15%;
+    max-height: max(80%, 5vw);
 }   
 #logo-container > div{
     flex: 1;
     max-width: 100%;
-    font-size: 5vw;
-    white-space: nowrap;
+    font-size: max(5vw, 3rem);
     /* border: 2px solid red; */
+}
+
+footer{
+    flex: 1;
+    color: aliceblue;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: clamp(0.5rem, 1.5vw, 1rem);
+    
+    /* border: 1px solid green; */
+}
+
+footer > a:visited{
+    color: aliceblue;
+}
+
+#content-container{
+    flex: 1;
+    /* border: 2px solid green; */
+}
+
+h1{
+    color: antiquewhite;
+    font-weight: 900;
 }
