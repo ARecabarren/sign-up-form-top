@@ -44,13 +44,13 @@
                                 <label for="first-name">
                                     First Name
                                 </label>
-                                <input type="text" name="name" id="first-name">
+                                <input type="text" name="name" id="first-name" placeholder="Hanamishi" required>
                             </div>
                             <div class="field-holder">
                                 <label for="last-name">
                                     Last Name
                                 </label>
-                                <input type="text" name="last-name" id="last-name">
+                                <input type="text" name="last-name" id="last-name" placeholder="Sakuragi" required>
                             </div>
                         </div>
                         <div class="form-row">
@@ -58,13 +58,13 @@
                                 <label for="email">
                                     Email
                                 </label>
-                                <input type="email">
+                                <input type="email" placeholder="myEmail@service.com" required>
                             </div>
                             <div class="field-holder">
                                 <label for="phone">
                                     Phone
                                 </label>
-                                <input type="tel">
+                                <input type="tel" required pattern="^569[0-9]{8}$" placeholder="56995467331">
                             </div>
 
                         </div>
@@ -73,14 +73,15 @@
                                 <label for="password">
                                     Password
                                 </label>
-                                <input type="password">
+                                <input type="password" id="password">
                             </div>
 
                             <div class="field-holder">
                                 <label for="confirm-password">
                                     Confirm Password
                                 </label>
-                                <input type="password">
+                                <input type="password" id="confirm-password">
+                                <span id="pass-match"></span>
                             </div>
                         </div>
 
@@ -94,5 +95,6 @@
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

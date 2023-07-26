@@ -149,6 +149,7 @@ label{
 
 .form-row{
     display: flex;
+    /* position: relative; */
     /* border: 1px solid green; */
     margin-bottom: -9px;
     /* height: 30%; */
@@ -179,6 +180,7 @@ input, label{
     width: max(50%, 15vw);
     margin-left: 10px;
     padding-left: 10px;
+    font-family: 'Courier New', Courier, monospace;
     /* max-width: max(70%,1vw); */
 }
 
@@ -187,7 +189,6 @@ input[type = 'submit']{
     height: 15%;
     width: 20%;
     margin-left: 40px;
-    font-family: 'Courier New', Courier, monospace;
 }
 input[type = 'submit']:focus{
     box-shadow: none;
@@ -198,6 +199,26 @@ input[type = 'submit']:hover{
     transition: ease-out 0.3s;
     box-shadow: 0 0 5px 1px whitesmoke;
 }
+input[type = 'submit']:active{
+    background-color: #1f778f;
+    font-size: 1.1rem;
+    transition: ease-out 0.3s;
+    box-shadow: 0 0 5px 1px whitesmoke;
+}
+
+input:invalid::after{
+    content: 'Invalid input';
+    color: red;
+    font-size: 4rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* border: 1px solid red; */
+}
+
+#bottom-section{
+    position: relative;
+}
 
 #bottom-section a:visited{
   color: #0ab6e5;
@@ -205,6 +226,21 @@ input[type = 'submit']:hover{
 #bottom-section a{
     text-decoration: none;
 }
+input::placeholder{
+    color: #0ab6e5a2;
+}
 
+#pass-match{
+    position:absolute;
+    color: black;
+    background-color: antiquewhite;
+    font-size: 0.8rem;
+    box-shadow: 0px 0px 5px 1px whitesmoke;
+    border-radius: 3px;
+    /* border: 1px solid red; */
+    right: 20px;
+    bottom: -10px;
+    transition: 0.3s;
+}
 
 
