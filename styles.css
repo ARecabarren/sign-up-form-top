@@ -97,12 +97,14 @@ h1,h2,h3{
     font-family: 'Courier New', Courier, monospace;
     color: antiquewhite;
     font-weight: 500;
+    font-size: clamp(0.7rem, 3vw, auto);
     padding: 0.5rem 2rem;
     margin: 0;
 }
 h3{
     /* border: 1px solid red; */
     padding: 0 41.5px;
+    font-size: clamp(1rem, 2vw, 1.3rem);
     /* margin-left: 10px; */
 }
 
@@ -110,10 +112,11 @@ h3{
 #content-container p{
     color: aliceblue;
     line-height: 2rem;
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 2vw, 1rem);
     font-weight: bold;
     margin-top: 1rem;
     padding: 0.5rem 2rem;
+    /* overflow: hidden; */
 }
 
 #content-container div{
@@ -127,6 +130,7 @@ h3{
 #bottom-section{
     background-color: #0ab6e55e;
     height: 35%;
+    overflow: hidden;
 }
 
 #middle-section{
@@ -146,6 +150,8 @@ label{
 .form-row{
     display: flex;
     /* border: 1px solid green; */
+    margin-bottom: -9px;
+    /* height: 30%; */
 }
 
 .field-holder{
@@ -153,7 +159,7 @@ label{
     position: relative;
     max-width: 36%;
     margin-left: 0;
-    padding-left: 0;
+    /* padding-left: 0; */
     /* border: 1px solid red; */
 }
 input{
@@ -174,6 +180,30 @@ input, label{
     margin-left: 10px;
     padding-left: 10px;
     /* max-width: max(70%,1vw); */
+}
+
+input[type = 'submit']{
+    margin-top: 20px;
+    height: 15%;
+    width: 20%;
+    margin-left: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+input[type = 'submit']:focus{
+    box-shadow: none;
+    /* border: 1px solid whitesmoke ; */
+}
+input[type = 'submit']:hover{
+    background-color: #0ab6e5;
+    transition: ease-out 0.3s;
+    box-shadow: 0 0 5px 1px whitesmoke;
+}
+
+#bottom-section a:visited{
+  color: #0ab6e5;
+}
+#bottom-section a{
+    text-decoration: none;
 }
 
 
